@@ -37,7 +37,7 @@ jobs:
         run : ng lint
 
       - name: Run build
-        run : ng build --prod --base-href=\"/angular-actions-deploy/\"
+        run : ng run-script build
 
       - name: Deploy to github pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
