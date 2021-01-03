@@ -45,3 +45,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist/angular-actions-deploy
+          PRESERVE: true
+          # SILENT: true
