@@ -27,9 +27,6 @@ jobs:
           # no support for lts as of now with github actions.
           # issue link : https://github.com/actions/setup-node/issues/26
           node-version: '14'
-          # we don't need to force check the latest version of node, so added false
-          # which is the default version, added here for discussion
-          check-latest: false
       - name: Angular Install
         run : npm install -g @angular/cli
 
@@ -40,7 +37,7 @@ jobs:
         run : ng lint
 
       - name: Run build
-        run : ng build --prod
+        run : ng build --prod --base-href=\"/angular-actions-deploy/\"
 
       - name: Deploy to github pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
