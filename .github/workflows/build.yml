@@ -47,4 +47,5 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist/angular-actions-deploy
           PRESERVE: true
-          # SILENT: true
+          # github user name and email shows up in the logs, so it would be better to make it silent. 
+          SILENT: true 
